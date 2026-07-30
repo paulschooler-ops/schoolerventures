@@ -4,6 +4,11 @@
   --color-text: #1a1a1a;
   --color-accent: #2b6cb0;
   --max-width: 800px;
+
+  --deep-forest: #253B2F;
+  --warm-gold: #B48126;
+  --rust: #993F0D;
+  --warm-cream: #F5F1E8;
 }
 
 * {
@@ -149,4 +154,97 @@ body {
   font-size: 0.85rem;
   color: #666;
   border-top: 1px solid #e2e2e2;
+}
+
+/* Hero (Front Door) */
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 8vh 6vw;
+  background: var(--warm-cream);
+}
+
+.hero-door {
+  flex: 0 0 38%;
+  max-width: 440px;
+  min-width: 220px;
+}
+
+.hero-door img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-text {
+  flex: 1 1 55%;
+}
+
+.hero-text h1 {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  font-size: clamp(1.9rem, 3.6vw, 3rem);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.6rem 0;
+  line-height: 1.15;
+}
+
+.hero-text h1 span {
+  display: block;
+}
+
+.hero-text h1 .word-schooler {
+  color: var(--deep-forest);
+}
+
+.hero-text h1 .word-ventures {
+  color: var(--warm-gold);
+}
+
+.hero-text .tagline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+  color: var(--warm-gold);
+  margin: 0 0 1.5rem 0;
+  letter-spacing: 0.01em;
+}
+
+.hero-text p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1rem, 1.15vw, 1.15rem);
+  line-height: 1.65;
+  color: var(--deep-forest);
+  max-width: 46ch;
+  margin: 0;
+}
+
+.hero-text .step-through {
+  color: var(--rust);
+  font-weight: 500;
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 6vh 8vw;
+    gap: 2.5rem;
+  }
+  .hero-door {
+    flex: 0 0 auto;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+  .hero-text p {
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }
