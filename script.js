@@ -1,4 +1,4 @@
-const BLOG_API_URL = 'https://content.schoolerventures.com/wp-json/wp/v2/posts?per_page=6';
+const BLOG_API_BASE = 'https://content.schoolerventures.com/wp-json/wp/v2/posts';
 
 function stripHtml(html) {
   const doc = new DOMParser().parseFromString(html || '', 'text/html');
@@ -52,12 +52,12 @@ function showMessage(container, text) {
   container.appendChild(message);
 }
 
-async function loadBlogPosts() {
-  const container = document.getElementById('blog-posts');
+async function loadPosts(containerId, perPage) {
+  const container = document.getElementById(containerId);
   if (!container) return;
 
   try {
-    const response = await fetch(BLOG_API_URL);
+    const response = await fetch(`${BLOG_API_BASE}?per_page=${perPage}`);
     if (!response.ok) throw new Error('Request failed with status ' + response.status);
 
     const posts = await response.json();
@@ -73,4 +73,5 @@ async function loadBlogPosts() {
   }
 }
 
-loadBlogPosts();
+loadPosts('blog-posts', 6);
+loadPosts('latest-post', 1);

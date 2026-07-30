@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Front Door</title>
+  <title>Schooler Ventures</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -12,73 +12,72 @@
 <body>
 
   <header class="site-header">
-    <div class="container">
-      <span class="logo">Your Name</span>
-      <nav>
-        <a href="#identity">Identity</a>
-        <a href="#problem">Problem</a>
-        <a href="#proof">Proof</a>
-        <a href="#blog">Blog</a>
-        <a href="#action">Action</a>
-        <a href="#os-connection">OS Connection</a>
+    <div class="header-inner">
+      <a href="index.html" class="logo-link" aria-label="Schooler Ventures — Home">
+        <img src="images/schooler-ventures-logo.png" alt="Schooler Ventures">
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="index.html" class="nav-link" aria-current="page">Home</a>
+        <a href="explore.html" class="nav-link">Explore</a>
+        <a href="sv-boss.html" class="nav-link">SV-BOSS</a>
       </nav>
     </div>
   </header>
 
   <main>
 
-    <section id="identity" class="hero">
-      <div class="hero-door">
-        <img src="images/door-transparent.png" alt="Schooler Ventures door graphic">
-      </div>
-      <div class="hero-text">
-        <h1><span class="word-schooler">Schooler</span><span class="word-ventures">Ventures</span></h1>
-        <p class="tagline">Ideas. Systems. Businesses. Preparing for what's next.</p>
-        <p>The way we build businesses is changing. Schooler Ventures is where practical experience meets artificial intelligence&mdash;sharing ideas, documenting real projects, developing business operating systems, and helping business owners confidently prepare for what's next.</p>
-        <p class="step-through">Step through to discover SV-BOSS.</p>
-      </div>
-    </section>
-
-    <section id="problem" class="section alt">
-      <div class="container">
-        <h2>The Problem</h2>
-        <p>Placeholder: describe the problem you're focused on solving. What's broken, missing, or underserved that you care about?</p>
-      </div>
-    </section>
-
-    <section id="proof" class="section">
-      <div class="container">
-        <h2>Proof</h2>
-        <p>Placeholder: evidence that backs up your claim — past work, results, credentials, testimonials, or examples.</p>
-        <ul>
-          <li>Placeholder proof point one</li>
-          <li>Placeholder proof point two</li>
-          <li>Placeholder proof point three</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="blog" class="section alt">
-      <div class="container">
-        <h2>Blog</h2>
-        <div id="blog-posts" class="blog-posts">
-          <p class="blog-message">Loading posts&hellip;</p>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-door">
+          <img src="images/door-transparent.png" alt="Schooler Ventures door graphic">
+        </div>
+        <div class="hero-text">
+          <h1><span class="word-schooler">Schooler</span><span class="word-ventures">Ventures</span></h1>
+          <p class="tagline">Ideas. Systems. Businesses. Preparing for what's next.</p>
+          <p>The way we build businesses is changing. Schooler Ventures is where practical experience meets artificial intelligence&mdash;sharing ideas, documenting real projects, developing business operating systems, and helping business owners confidently prepare for what's next.</p>
+          <a href="sv-boss.html" class="btn btn-primary">Step through to discover SV-BOSS</a>
         </div>
       </div>
     </section>
 
-    <section id="action" class="section">
+    <section class="section bg-white">
       <div class="container">
-        <h2>Take Action</h2>
-        <p>Placeholder: the specific next step you want a visitor to take — contact you, book a call, sign up, etc.</p>
-        <a href="#" class="button">Placeholder Call to Action</a>
+        <h2>SV-BOSS</h2>
+        <p class="section-lede">Business operating systems for the AI era.</p>
+        <p>Placeholder: a brief introduction to SV-BOSS &mdash; the proprietary business operating system and transformation methodology that helps organizations become more organized, intelligent, automated, adaptable, and human-centered in the AI era.</p>
+        <a href="sv-boss.html" class="btn btn-secondary">Learn about SV-BOSS</a>
       </div>
     </section>
 
-    <section id="os-connection" class="section">
+    <section class="section bg-cream">
       <div class="container">
-        <h2>Operating System Connection</h2>
-        <p>Placeholder: how this page or project connects into your broader "operating system" — the tools, workflows, or philosophy tying your work together.</p>
+        <h2>Featured Story</h2>
+        <article class="featured-story">
+          <p class="featured-label">Placeholder: featured label (e.g. "Case Study" or "Field Note")</p>
+          <h3>Placeholder: featured story title</h3>
+          <p>Placeholder: a short excerpt introducing one strategically selected article &mdash; a project, a lesson, or an idea worth spotlighting.</p>
+          <a href="explore.html" class="btn btn-secondary">Read the story</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section bg-white">
+      <div class="container">
+        <h2>About Paul</h2>
+        <div class="about-paul">
+          <div class="about-photo" role="img" aria-label="Placeholder photo of Paul Schooler">Photo placeholder</div>
+          <p>Placeholder: a short bio. After 35+ years in entrepreneurship, direct sales, recruiting, and leadership development, Paul found himself navigating a changing work environment firsthand. Learning AI put him back in the driver's seat &mdash; and opened a new chapter at the front edge of a major transformation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-cream">
+      <div class="container">
+        <h2>Latest Post</h2>
+        <div id="latest-post" class="blog-posts">
+          <p class="blog-message">Loading latest post&hellip;</p>
+        </div>
+        <a href="explore.html" class="btn btn-secondary">See all posts</a>
       </div>
     </section>
 
@@ -86,7 +85,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2026 Your Name. All rights reserved.</p>
+      <p>&copy; 2026 Schooler Ventures. All rights reserved.</p>
     </div>
   </footer>
 
