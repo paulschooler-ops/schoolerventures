@@ -73,5 +73,47 @@ async function loadPosts(containerId, perPage) {
   }
 }
 
+async function loadFeaturedPost() {
+  const container = document.getElementById('featured-story');
+  if (!container) return;
+
+  try {
+    const response = await fetch(`${BLOG_API_BASE}?per_page=20`);
+    if (!response.ok) throw new Error('Request failed with status ' + response.status);
+
+    const posts = await response.json();
+    if (!Array.isArray(posts) || posts.length === 0) return;
+
+    // Sticky posts aren't reordered to the front by the REST API, so pull a
+    // batch of recent posts and pick whichever one is actually marked sticky.
+    const featured = posts.find(post => post.sticky) || posts[0];
+
+    container.textContent = '';
+
+    const label = document.createElement('p');
+    label.className = 'featured-label';
+    label.textContent = 'Field Note';
+
+    const heading = document.createElement('h3');
+    const link = document.createElement('a');
+    link.href = toContentDomain(featured.link);
+    link.textContent = stripHtml(featured.title && featured.title.rendered) || 'Untitled';
+    heading.appendChild(link);
+
+    const excerpt = document.createElement('p');
+    excerpt.textContent = stripHtml(featured.excerpt && featured.excerpt.rendered);
+
+    const cta = document.createElement('a');
+    cta.className = 'btn btn-secondary';
+    cta.href = toContentDomain(featured.link);
+    cta.textContent = 'Read the story';
+
+    container.append(label, heading, excerpt, cta);
+  } catch (error) {
+    // leave placeholder in place on failure
+  }
+}
+
 loadPosts('blog-posts', 6);
 loadPosts('latest-post', 1);
+loadFeaturedPost();
