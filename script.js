@@ -90,10 +90,6 @@ async function loadFeaturedPost() {
 
     container.textContent = '';
 
-    const label = document.createElement('p');
-    label.className = 'featured-label';
-    label.textContent = 'Field Note';
-
     const heading = document.createElement('h3');
     const link = document.createElement('a');
     link.href = toContentDomain(featured.link);
@@ -108,7 +104,7 @@ async function loadFeaturedPost() {
     cta.href = toContentDomain(featured.link);
     cta.textContent = 'Read the story';
 
-    container.append(label, heading, excerpt, cta);
+    container.append(heading, excerpt, cta);
   } catch (error) {
     // leave placeholder in place on failure
   }

@@ -146,13 +146,14 @@ body {
   margin-top: 1rem;
 }
 
-.featured-label {
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--rust);
-  margin-bottom: 0.25rem;
+.featured-story h3 a {
+  color: var(--deep-forest);
+  text-decoration: none;
+}
+
+.featured-story h3 a:hover {
+  color: var(--warm-gold);
+  text-decoration: underline;
 }
 
 /* About Paul */
