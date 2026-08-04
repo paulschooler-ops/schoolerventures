@@ -15,7 +15,7 @@
       question: 'How can we reach you?',
       fields: [
         { key: 'email', type: 'email', label: 'Email', placeholder: 'you@company.com', required: true, autocomplete: 'email' },
-        { key: 'phone', type: 'tel', label: 'Phone', placeholder: '(optional)', required: false, autocomplete: 'tel' }
+        { key: 'phone', type: 'tel', label: 'Phone', placeholder: '(555) 555-5555', required: true, autocomplete: 'tel' }
       ]
     },
     {

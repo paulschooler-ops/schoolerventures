@@ -8,6 +8,7 @@
 const REQUIRED_FIELDS = [
   'name',
   'email',
+  'phone',
   'company',
   'businessDescription',
   'prompt',
@@ -18,7 +19,7 @@ const REQUIRED_FIELDS = [
   'timeline'
 ];
 
-const OPTIONAL_FIELDS = ['phone', 'website', 'notes'];
+const OPTIONAL_FIELDS = ['website', 'notes'];
 
 const ALLOWED_FIELDS = new Set([...REQUIRED_FIELDS, ...OPTIONAL_FIELDS]);
 const MAX_LENGTH = 5000;
