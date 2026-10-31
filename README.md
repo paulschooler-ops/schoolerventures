@@ -1,2 +1,3 @@
-# schoolerventures
-Personal Front Door site — SV-BOSS learning lab.
+# Schooler Ventures
+
+Website for schoolerventures.com, hosted on Netlify.
