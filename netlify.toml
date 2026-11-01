@@ -1,3 +1,4 @@
+# Schooler Ventures site config
 [build]
   publish = "."
   functions = "netlify/functions"
